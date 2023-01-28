@@ -19,30 +19,74 @@
     <Filter Include="Header Files\File_Management">
       <UniqueIdentifier>{f04d199e-f5d8-4451-8ca4-4ffd17acf002}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Memory_Management">
+      <UniqueIdentifier>{b0c2bf46-6114-4d48-9bab-a5ff3077917a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory_Management">
+      <UniqueIdentifier>{c79af73b-b28e-4686-a538-7f43f2fdc792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory_Management\Files">
+      <UniqueIdentifier>{1a45f132-5927-4ab2-80e9-ff310f271e53}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StandardIncludes.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="FileController.cpp">
+      <Filter>Source Files\File_Management</Filter>
     </ClCompile>
     <ClCompile Include="Singleton.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\File_Management</Filter>
     </ClCompile>
-    <ClCompile Include="FileController.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="StandardIncludes.cpp">
+      <Filter>Source Files\File_Management</Filter>
+    </ClCompile>
+    <ClCompile Include="StackAllocator.cpp">
+      <Filter>Source Files\Memory_Management</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectPool.cpp">
+      <Filter>Source Files\Memory_Management</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource.cpp">
+      <Filter>Source Files\Memory_Management</Filter>
+    </ClCompile>
+    <ClCompile Include="Serializable.cpp">
+      <Filter>Source Files\Memory_Management</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="StandardIncludes.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="FileController.h">
+      <Filter>Header Files\File_Management</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\File_Management</Filter>
     </ClInclude>
-    <ClInclude Include="FileController.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="StandardIncludes.h">
+      <Filter>Header Files\File_Management</Filter>
     </ClInclude>
+    <ClInclude Include="StackAllocator.h">
+      <Filter>Header Files\Memory_Management</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectPool.h">
+      <Filter>Header Files\Memory_Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\Memory_Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Serializable.h">
+      <Filter>Header Files\Memory_Management</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="File1.txt">
+      <Filter>Source Files\Memory_Management\Files</Filter>
+    </Text>
+    <Text Include="File2.txt">
+      <Filter>Source Files\Memory_Management\Files</Filter>
+    </Text>
+    <Text Include="File3.txt">
+      <Filter>Source Files\Memory_Management\Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
