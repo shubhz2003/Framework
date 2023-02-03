@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Asset.cpp" />
+    <ClCompile Include="AssetController.cpp" />
     <ClCompile Include="FileController.cpp" />
     <ClCompile Include="Framework.cpp" />
     <ClCompile Include="ObjectPool.cpp" />
@@ -149,6 +151,8 @@
     <ClCompile Include="StandardIncludes.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Asset.h" />
+    <ClInclude Include="AssetController.h" />
     <ClInclude Include="FileController.h" />
     <ClInclude Include="ObjectPool.h" />
     <ClInclude Include="Resource.h" />
@@ -161,6 +165,12 @@
     <Text Include="File1.txt" />
     <Text Include="File2.txt" />
     <Text Include="File3.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Desktop\College\Game_Engine_Architechture\Assets\Emoji.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\..\..\..\Desktop\College\Game_Engine_Architechture\Assets\SoundEffect.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

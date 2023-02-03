@@ -22,7 +22,7 @@ void Resource::AssignNonDefaultValues()
 	m_subResource = Resource::Pool->GetResource();
 	m_subResource->m_val1 = 3;
 	m_subResource->m_val2 = 3.0f;
-	m_subResource->m_val3 + '3';
+	m_subResource->m_val3 = '3';
 }
 
 void Resource::ToString()

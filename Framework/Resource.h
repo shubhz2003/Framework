@@ -5,7 +5,7 @@
 #include "Serializable.h"
 #include "ObjectPool.h"
 
-class Resource
+class Resource : public Serializable
 {
 public:
 	//Constructor/Destructor

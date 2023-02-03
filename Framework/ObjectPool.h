@@ -14,6 +14,7 @@ public:
 		for (unsigned int count = 0; count < m_all.size(); count++)
 		{
 			cout << "Deleting pool object" << endl;
+			delete m_all[count];
 		}
 		m_all.clear();
 		m_available.clear();

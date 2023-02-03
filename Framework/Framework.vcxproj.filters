@@ -13,20 +13,35 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\File_Management">
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{f4acf2c6-dc4e-42ce-9c96-df6d4afbb175}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{ae76b3a8-c7fe-4031-9cb9-9b2db52723b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\File_Management">
       <UniqueIdentifier>{504788e6-7354-4901-93db-0a497d3890c1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\File_Management">
-      <UniqueIdentifier>{f04d199e-f5d8-4451-8ca4-4ffd17acf002}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Memory_Management">
-      <UniqueIdentifier>{b0c2bf46-6114-4d48-9bab-a5ff3077917a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Memory_Management">
+    <Filter Include="Source Files\Core\Memory_Management">
       <UniqueIdentifier>{c79af73b-b28e-4686-a538-7f43f2fdc792}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Memory_Management\Files">
+    <Filter Include="Source Files\Core\Memory_Management\Files">
       <UniqueIdentifier>{1a45f132-5927-4ab2-80e9-ff310f271e53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\File_Management">
+      <UniqueIdentifier>{f04d199e-f5d8-4451-8ca4-4ffd17acf002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Memory_Management">
+      <UniqueIdentifier>{b0c2bf46-6114-4d48-9bab-a5ff3077917a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Asset_Management">
+      <UniqueIdentifier>{eea75eb8-47c7-4938-9e30-3fd0e2599aef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Asset_Management">
+      <UniqueIdentifier>{b3e2446b-37a2-45d6-900d-891fa4fcaf5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Asset_Management\Assets">
+      <UniqueIdentifier>{891a8111-7754-46a2-9017-d33d9cf308d8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,59 +49,81 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FileController.cpp">
-      <Filter>Source Files\File_Management</Filter>
+      <Filter>Source Files\Core\File_Management</Filter>
     </ClCompile>
     <ClCompile Include="Singleton.cpp">
-      <Filter>Source Files\File_Management</Filter>
+      <Filter>Source Files\Core\File_Management</Filter>
     </ClCompile>
     <ClCompile Include="StandardIncludes.cpp">
-      <Filter>Source Files\File_Management</Filter>
+      <Filter>Source Files\Core\File_Management</Filter>
     </ClCompile>
     <ClCompile Include="StackAllocator.cpp">
-      <Filter>Source Files\Memory_Management</Filter>
+      <Filter>Source Files\Core\Memory_Management</Filter>
     </ClCompile>
     <ClCompile Include="ObjectPool.cpp">
-      <Filter>Source Files\Memory_Management</Filter>
+      <Filter>Source Files\Core\Memory_Management</Filter>
     </ClCompile>
     <ClCompile Include="Resource.cpp">
-      <Filter>Source Files\Memory_Management</Filter>
+      <Filter>Source Files\Core\Memory_Management</Filter>
     </ClCompile>
     <ClCompile Include="Serializable.cpp">
-      <Filter>Source Files\Memory_Management</Filter>
+      <Filter>Source Files\Core\Memory_Management</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset.cpp">
+      <Filter>Source Files\Core\Asset_Management</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetController.cpp">
+      <Filter>Source Files\Core\Asset_Management</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileController.h">
-      <Filter>Header Files\File_Management</Filter>
+      <Filter>Header Files\Core\File_Management</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
-      <Filter>Header Files\File_Management</Filter>
+      <Filter>Header Files\Core\File_Management</Filter>
     </ClInclude>
     <ClInclude Include="StandardIncludes.h">
-      <Filter>Header Files\File_Management</Filter>
+      <Filter>Header Files\Core\File_Management</Filter>
     </ClInclude>
     <ClInclude Include="StackAllocator.h">
-      <Filter>Header Files\Memory_Management</Filter>
+      <Filter>Header Files\Core\Memory_Management</Filter>
     </ClInclude>
     <ClInclude Include="ObjectPool.h">
-      <Filter>Header Files\Memory_Management</Filter>
+      <Filter>Header Files\Core\Memory_Management</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>Header Files\Memory_Management</Filter>
+      <Filter>Header Files\Core\Memory_Management</Filter>
     </ClInclude>
     <ClInclude Include="Serializable.h">
-      <Filter>Header Files\Memory_Management</Filter>
+      <Filter>Header Files\Core\Memory_Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset.h">
+      <Filter>Header Files\Core\Asset_Management</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetController.h">
+      <Filter>Header Files\Core\Asset_Management</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="File1.txt">
-      <Filter>Source Files\Memory_Management\Files</Filter>
+      <Filter>Source Files\Core\Memory_Management\Files</Filter>
     </Text>
     <Text Include="File2.txt">
-      <Filter>Source Files\Memory_Management\Files</Filter>
+      <Filter>Source Files\Core\Memory_Management\Files</Filter>
     </Text>
     <Text Include="File3.txt">
-      <Filter>Source Files\Memory_Management\Files</Filter>
+      <Filter>Source Files\Core\Memory_Management\Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Desktop\College\Game_Engine_Architechture\Assets\Emoji.jpg">
+      <Filter>Source Files\Core\Asset_Management\Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\..\..\..\Desktop\College\Game_Engine_Architechture\Assets\SoundEffect.wav">
+      <Filter>Source Files\Core\Asset_Management\Assets</Filter>
+    </Media>
   </ItemGroup>
 </Project>
