@@ -15,24 +15,47 @@ public:
 	//Methods
 	virtual void Serialize(std::ostream& _stream);
 	virtual void Deserialize(std::istream& _stream);
-	void AssignNonDefaultValues();
-	void ToString();
+	virtual void AssignNonDefaultValues();
+	virtual void ToString();
 
 	//Memebers
 	static ObjectPool<Resource>* Pool;
 
 protected:
-	void SerializePointer(std::ostream& _stream, Resource* _pointer);
-	void DeserializePointer(std::istream& _stream, Resource*& _pointer);
+	//Members
+	template<class T>
+	void SerializePointer(std::ostream& _stream, T* _pointer)
+	{
+		byte exits = 1;
+		if (_pointer != nullptr)
+		{
+			_stream.write(reinterpret_cast<char*>(&exits), sizeof(byte));
+			_pointer->Serialize(_stream);
+		}
+		else
+		{
+			byte exists = 0;
+			_stream.write(reinterpret_cast<char*>(&exists), sizeof(exists));
+		}
+	}
+	
+	template<class T>
+	void DeserializePointer(std::istream& _stream, T*& _pointer)
+	{
+		byte exists = 0;
+		_stream.read(reinterpret_cast<char*>(&exists), sizeof(exists));
+		if (exists == 1)
+		{
+			_pointer = T::Pool->GetResource();
+			_pointer->Deserialize(_stream);
+		}
+	}
+
 	void SerializeAsset(std::ostream& _stream, Asset* _asset);
 	void DeserializeAsset(std::istream& _stream, Asset*& _asset);
 
 private:
-	int m_val1;
-	double m_val2;
-	char m_val3;
-	Resource* m_subResource;
-	Asset* m_asset;
+
 };
 #endif // !RESOURCE_H
 

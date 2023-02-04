@@ -8,23 +8,32 @@ AssetController::AssetController()
 
 }
 
-void AssetController::Initialize(int _stackSize)
+AssetController::~AssetController()
 {
-	Stack = new StackAllocator();
-	AssetController::Stack->AllocateStack(_stackSize);
-	Asset::Pool = new ObjectPool<Asset>();
+	Clear();
 }
 
-AssetController::~AssetController()
+void AssetController::Clear()
 {
 	//Remove all asset objects from object pool
 	for (auto const& x : m_assets)
 	{
 		Asset::Pool->ReleaseResource(x.second);
 	}
-	delete Asset::Pool;
+	if (Asset::Pool != nullptr)
+	{
+		delete Asset::Pool;
+		Asset::Pool = nullptr;
+	}
 	Stack->ClearMemory();
 	m_assets.clear();
+}
+
+void AssetController::Initialize(int _stackSize)
+{
+	Stack = new StackAllocator();
+	AssetController::Stack->AllocateStack(_stackSize);
+	Asset::Pool = new ObjectPool<Asset>();
 }
 
 Asset* AssetController::GetAsset(string _guid)

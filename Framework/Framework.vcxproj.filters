@@ -75,6 +75,15 @@
     <ClCompile Include="AssetController.cpp">
       <Filter>Source Files\Core\Asset_Management</Filter>
     </ClCompile>
+    <ClCompile Include="SoundEffect.cpp">
+      <Filter>Source Files\Core\Asset_Management</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit.cpp">
+      <Filter>Source Files\Core\Asset_Management</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Source Files\Core\Asset_Management</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileController.h">
@@ -102,6 +111,15 @@
       <Filter>Header Files\Core\Asset_Management</Filter>
     </ClInclude>
     <ClInclude Include="AssetController.h">
+      <Filter>Header Files\Core\Asset_Management</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundEffect.h">
+      <Filter>Header Files\Core\Asset_Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Unit.h">
+      <Filter>Header Files\Core\Asset_Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
       <Filter>Header Files\Core\Asset_Management</Filter>
     </ClInclude>
   </ItemGroup>

@@ -14,6 +14,7 @@ public:
 
 	//Accessors
 	void Initialize(int _stackSize);
+	void Clear();
 	Asset* GetAsset(string _guid);
 
 	//Methods
