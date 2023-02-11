@@ -2,6 +2,8 @@
 #ifndef STANDARD_INCLUDES_H
 #define STANDAR_INCLUDES_H
 
+#define SDL_MAIN_HANDLED
+
 //Contains most things that are needed in almost all files
 // Include standard headers
 #include <string>
@@ -12,6 +14,7 @@
 #include <stdio.h>
 #include <thread>
 #include <map>
+#include <SDL.h>
 
 //Project Headers
 #include "Singleton.h"
